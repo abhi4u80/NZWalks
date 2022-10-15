@@ -149,10 +149,10 @@ namespace NZWalks.API.Controllers
         
         {
             //Validate the incoming request
-           if(!ValidateUpdateRegionAsync(updateRegionRequest))
-            {
-                return BadRequest(ModelState);
-            }
+           //if(!ValidateUpdateRegionAsync(updateRegionRequest))
+           // {
+           //     return BadRequest(ModelState);
+           // }
 
             // Convert DTO to domain model
 
@@ -201,12 +201,13 @@ namespace NZWalks.API.Controllers
 
         private bool ValidateAddRegionAsync(Models.DTO.AddRegionRequest addRegionRequest)
         {
-            if(addRegionRequest==null)
-            {
-                ModelState.AddModelError(nameof(addRegionRequest),
-                    $"Data is required");
+            //if(addRegionRequest==null)
+            //{
+            //    ModelState.AddModelError(nameof(addRegionRequest),
+            //        $"Data is required");
                
-            }
+            //}
+
 
             if (string.IsNullOrWhiteSpace(addRegionRequest.Code))
             {
